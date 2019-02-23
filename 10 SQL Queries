@@ -1,0 +1,10 @@
+SELECT * FROM `bigquery-public-data.baseball.games_post_wide` 
+#SELECT * FROM `bigquery-public-data.baseball.games_post_wide` WHERE dayNight="N"
+#ORDER by duration Desc
+#SELECT MAX(duration) FROM `bigquery-public-data.baseball.games_post_wide`
+#SELECT Count(distinct(startTime)) from `bigquery-public-data.baseball.games_post_wide`
+#SELECT seasonType="PST" FROM `bigquery-public-data.baseball.games_post_wide` 
+#SELECT daynight, COUNT (*) FROM `bigquery-public-data.baseball.games_post_wide` GROUP BY daynight
+#SELECT AVG(durationMinutes) from `bigquery-public-data.baseball.games_post_wide` 
+#SELECT durationMinutes, COUNT (*) from `bigquery-public-data.baseball.games_post_wide` GROUP BY durationMinutes HAVING COUNT (*) > 200
+#SELECT * FROM `bigquery-public-data.baseball.games_post_wide`  WHERE homeTeamName="Dodgers" AND awayTeamName="Cubs"
