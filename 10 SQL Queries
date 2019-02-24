@@ -1,10 +1,31 @@
+1) To Retrieve entire dataset regarding the baseball game 
 SELECT * FROM `bigquery-public-data.baseball.games_post_wide` 
-#SELECT * FROM `bigquery-public-data.baseball.games_post_wide` WHERE dayNight="N"
-#ORDER by duration Desc
-#SELECT MAX(duration) FROM `bigquery-public-data.baseball.games_post_wide`
-#SELECT Count(distinct(startTime)) from `bigquery-public-data.baseball.games_post_wide`
-#SELECT seasonType="PST" FROM `bigquery-public-data.baseball.games_post_wide` 
-#SELECT daynight, COUNT (*) FROM `bigquery-public-data.baseball.games_post_wide` GROUP BY daynight
-#SELECT AVG(durationMinutes) from `bigquery-public-data.baseball.games_post_wide` 
-#SELECT durationMinutes, COUNT (*) from `bigquery-public-data.baseball.games_post_wide` GROUP BY durationMinutes HAVING COUNT (*) > 200
-#SELECT * FROM `bigquery-public-data.baseball.games_post_wide`  WHERE homeTeamName="Dodgers" AND awayTeamName="Cubs"
+
+2) To Retrieve data for games played particularly at Night
+SELECT * FROM `bigquery-public-data.baseball.games_post_wide` WHERE dayNight="N"
+
+3) To Retrieve data for games in the descending order of duration of games
+SELECT * FROM `bigquery-public-data.baseball.games_post_wide` 
+ORDER by duration Desc
+
+4) To Retrieve isolated data of game played for maximum duration
+SELECT MAX(duration) FROM `bigquery-public-data.baseball.games_post_wide`
+#SELECT MIN(duration) FROM `bigquery-public-data.baseball.games_post_wide`
+
+5) To obtain the unique instances of startTime or times at which games began 
+SELECT Count(distinct(startTime)) from `bigquery-public-data.baseball.games_post_wide`
+
+6) To Retrieve data type of a particular type of season
+SELECT seasonType="PST" FROM `bigquery-public-data.baseball.games_post_wide` 
+
+7) To Retrieve data grouped based on whether game was played during the Day or Night
+SELECT daynight, COUNT (*) FROM `bigquery-public-data.baseball.games_post_wide` GROUP BY daynight
+
+8) Obtain average duration of time for which games were played
+SELECT AVG(durationMinutes) from `bigquery-public-data.baseball.games_post_wide` 
+
+9) To Obtain data for games played for durations greater than 200 minutes
+SELECT durationMinutes, COUNT (*) from `bigquery-public-data.baseball.games_post_wide` GROUP BY durationMinutes HAVING COUNT (*) > 200
+
+10) To obtain isolated data between games played between Dodgers and Cubs, specifically when Dodgers are the Home Team and Cubs are the Away Team
+SELECT * FROM `bigquery-public-data.baseball.games_post_wide`  WHERE homeTeamName="Dodgers" AND awayTeamName="Cubs"
